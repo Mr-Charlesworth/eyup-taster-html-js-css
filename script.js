@@ -1,5 +1,3 @@
-const hitCounter = document.getElementById('hit-counter');
-
 let hits = 0;
 let gameStarted = false;
 
@@ -10,14 +8,9 @@ function incrementHits() {
   }
 }
 
-const walls = document.querySelectorAll('.wall');
-
 walls.forEach(function (wall) {
   wall.onmouseover = incrementHits;
 });
-
-const resetBtn = document.getElementById('btn-reset');
-const finishBtn = document.getElementById('btn-finish');
 
 function reset() {
   hits = 0;
@@ -33,9 +26,6 @@ resetBtn.onclick = reset;
 let startTime = Date.now();
 let timeElapsed;
 let timerInterval;
-
-const timeElapsedEl = document.getElementById('time-elapsed');
-const startBtn = document.getElementById('btn-start');
 
 function updateTimer() {
   timeElapsed = Date.now() - startTime;
@@ -72,7 +62,5 @@ function finishGame() {
 }
 
 finishBtn.onclick = finishGame;
-
-const body = document.getElementById('body');
 
 body.onmouseleave = alertOutOfBounds;

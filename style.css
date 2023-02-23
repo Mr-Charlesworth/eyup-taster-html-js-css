@@ -3,8 +3,8 @@
 }
 
 body {
-  margin: 0;
-  height: 100vh;
+  margin: 0; /* Get rid of the tiny bit of margin at the edges of the maze */
+  height: 100vh; /* Make the height of the page be the same as the height of the browser window */
 }
 
 .wall:hover {
